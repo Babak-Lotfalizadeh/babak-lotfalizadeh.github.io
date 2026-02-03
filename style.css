@@ -1130,10 +1130,6 @@ article .github__button-icon:not(:last-child) {
   align-items: center;
 }
 
-.stranger__chats-img {
-  background-image: url(/img/stranger-chats/web-mockup-bg.png);
-}
-
 .stranger__chats-info {
   color: white;
   max-width: 35rem;
@@ -1198,8 +1194,7 @@ article .github__button-icon:not(:last-child) {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 2rem 0;
-  padding-right: 2rem;
+  padding: 2rem 2rem 2rem 3rem;
 }
 
 .showcase__item-info-text {
@@ -1267,7 +1262,7 @@ article .github__button-icon:not(:last-child) {
 
   .showcase__item-info {
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 3rem;
   }
 }
 
