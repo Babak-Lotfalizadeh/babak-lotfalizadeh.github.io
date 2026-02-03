@@ -1,147 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Babak Lotfalizadeh – iOS Developer</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- PAGE WRAPPER -->
-  <div class="page">
-    <!-- HERO / PROFILE SECTION -->
-    <header class="hero">
-      <div class="hero__text">
-        <!-- Change your name, title and subtitle here -->
-        <p class="hero__eyebrow">Mobile Developer</p>
-        <h1 class="hero__title">Babak Lotfalizadeh</h1>
-        <p class="hero__subtitle">Building polished apps people actually use</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FFFFFF" />
 
-        <p class="hero__description">
-          Mobile engineer focused on high-quality, production apps. Experience
-          shipping to the App Store and Play Store, working with real users, and iterating
-          based on feedback.
-        </p>
+    <meta
+      name="description"
+      content="Babak Lotfalizadeh - Senior Flutter Developer with 10+ years of experience in mobile development. Specializing in Flutter, Dart, and cross-platform applications."
+    />
 
-        <div class="hero__actions">
-          <!-- Update these links to your own profiles -->
-          <a href="#portfolio" class="btn btn--primary">View portfolio</a>
-          <a href="mailto:babaklotfalizadeh@example.com" class="btn btn--ghost">Contact me</a>
-        </div>
+    <meta
+      property="og:title"
+      content="Portfolio - Babak Lotfalizadeh, Senior Flutter Developer"
+    />
+    <meta
+      property="og:description"
+      content="Accomplished Mobile Software Developer with over 10 years of experience, specializing in Flutter (5 years) and Native Mobile Development (5 years)."
+    />
+    <meta
+      property="og:image"
+      content="img/viktormauzer-dev-portfolio.png"
+    />
+    <meta property="og:url" content="https://babak-lotfalizadeh.github.io/" />
+    <meta
+      property="og:site_name"
+      content="Portfolio - Babak Lotfalizadeh, Senior Flutter Developer"
+    />
 
-        <div class="hero__links">
-          <!-- Social / external links -->
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-          <span>·</span>
-          <a href="https://www.linkedin.com/in/babak-lotfalizadeh/" target="_blank" rel="noopener">LinkedIn</a>
-          <span>·</span>
-          <a href="https://www.linkedin.com/in/babak-lotfalizadeh/" target="_blank" rel="noopener">CV on LinkedIn</a>
+    <link rel="apple-touch-icon" href="img/apple-icon.png" />
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
+
+    <link rel="stylesheet" href="style.css?v=2.0" />
+    <title>Portfolio - Babak Lotfalizadeh, Senior Flutter Developer</title>
+  </head>
+  <body ontouchstart="">
+    <header class="header">
+      <div class="header__button no__highlights">
+        <div class="header__ham">
+          <span>&nbsp;</span>
+          <span>&nbsp;</span>
+          <span>&nbsp;</span>
         </div>
       </div>
-
-      <div class="hero__photo-wrapper">
-        <!-- Replace img/profile.jpg with your own image file -->
-        <div class="hero__decoration"></div>
-        <img
-          src="img/profile.png"
-          alt="Portrait of Babak Lotfalizadeh"
-          class="hero__photo"
-        />
-      </div>
+      <div class="header__bg">&nbsp;</div>
+      <nav class="header__nav">
+        <div class="header__nav-item">
+          <span>Portfolio</span>
+          <ul>
+            <li>
+              <a aria-label="Github"
+              rel="noreferrer noopener"
+              target="_blank"
+              class="header__nav-link"
+              href="https://github.com/babaklotfalizadeh"
+                >GitHub →</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="header__nav-item">
+          <span>menu</span>
+          <ul>
+            <li>
+              <a class="header__nav-link" href="/index.html">Home</a>
+            </li>
+            <li><a class="header__nav-link" href="about.html">About</a></li>
+            <li><a class="header__nav-link" href="privacy.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="header__nav-item">
+          <span>Contact</span>
+          <ul>
+            <li>
+              <a
+                class="button button-white no__highlights"
+                rel="noreferrer noopener"
+                target="_blank"
+                href="https://www.linkedin.com/in/babaklotfalizadeh"
+              >
+                <svg class="button-icon">
+                  <use xlink:href="/icons/sprite.svg#vector-linkedin"></use>
+                </svg>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                class="button button-white no__highlights"
+                rel="noreferrer noopener"
+                target="_blank"
+                href="files/Babak_Lotfalizadeh_Resume.pdf"
+              >
+                Download CV
+              </a>
+            </li>
+            <li>
+              <div class="button send-email button-white no__highlights">
+                <svg class="button-icon">
+                  <use xlink:href="/icons/sprite.svg#vector-mail"></use>
+                </svg>
+                Email Address
+              </div>
+              <div class="email-address"></div>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <!-- PORTFOLIO SECTION -->
-    <main>
-      <section id="portfolio" class="section section--portfolio">
-        <div class="section__header">
-          <h2 class="section__title">Portfolio</h2>
-          <p class="section__subtitle">
-            A selection of apps and projects I’ve worked on recently.
-          </p>
+    <section class="hero">
+      <img
+        src="img/decoration/grid-dots.png"
+        alt="grid-dots"
+        class="grid__dots"
+      />
+      <div class="decoration__element">&nbsp;</div>
+      <div class="decoration__element2">&nbsp;</div>
+      <div class="hero__info">
+        <img class="hero__info-img" src="img/profile-pic.jpg" alt="profile__photo">
+        <div class="hero__text">
+          <h1>Babak Lotfalizadeh</h1>
+          <span class="hero__text-desc">Senior Flutter Developer at European Broadcasting Union (EBU)</span>
         </div>
-
-        <!-- Each card is easy to duplicate and edit -->
-        <div class="portfolio-grid">
-          <!-- SKIMS -->
-          <article class="card">
-            <div class="card__media">
-              <!-- Replace with your SKIMS app screenshot -->
-              <img src="img/skims.jpg" alt="SKIMS iOS app" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">SKIMS</h3>
-              <p class="card__meta">iOS · Shopping · App Store</p>
-              <p class="card__description">
-                Official SKIMS app focused on a smooth shopping experience for
-                underwear, loungewear and shapewear. Worked on building and
-                refining the iOS experience used by a large, global audience.
-              </p>
-              <div class="card__links">
-                <a href="https://apps.apple.com/us/app/skims/id6449501345" target="_blank" rel="noopener">
-                  View on App Store
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- tech-i -->
-          <article class="card">
-            <div class="card__media">
-              <!-- Replace with your tech-i app screenshot -->
-              <img src="img/tech-i.jpg" alt="tech-i media technology app" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">tech-i</h3>
-              <p class="card__meta">iOS · iPadOS · News / Media Tech</p>
-              <p class="card__description">
-                App for the European Broadcasting Union (EBU) bringing together
-                the latest developments in media technology: news, events and
-                videos, with offline support and multi-language UI.
-              </p>
-              <div class="card__links">
-                <a href="https://apps.apple.com/be/app/tech-i/id6448098876" target="_blank" rel="noopener">
-                  View on App Store
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Older portfolio -->
-          <article class="card">
-            <div class="card__media">
-              <img src="img/portfolio-slides.jpg" alt="Previous portfolio slides" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">Previous portfolio work</h3>
-              <p class="card__meta">Concepts · Experiments</p>
-              <p class="card__description">
-                A collection of older portfolio pieces and experiments. I don’t
-                love all of them anymore, but they show part of my path and how
-                my design and engineering decisions evolved.
-              </p>
-              <div class="card__links">
-                <a href="https://docs.google.com/presentation/d/1X5cIbd14GTjbKfV_DzzoXM3XnE2CYK9F3mbExC5w9M8/edit?slide=id.gc6f80d1ff_0_0#slide=id.gc6f80d1ff_0_0" target="_blank" rel="noopener">
-                  View slide deck
-                </a>
-              </div>
-            </div>
-          </article>
+      </div>
+      <div class="hero__cta">
+        <span>portfolio</span>
+        <div class="hero__cta-icon">
+          <svg class="hero__icon">
+            <use xlink:href="/icons/sprite.svg#vector-arrow"></use>
+          </svg>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <!-- FOOTER / CONTACT -->
+    <section class="stranger__chats">
+      <div class="stranger__chats-info">
+        <h2>Skills & Expertise</h2>
+        <p>
+          Flutter & Dart development, State Management (Provider, Riverpod, Bloc, GetX),
+          Firebase integration, API & REST integration, CI/CD pipelines, automated testing,
+          and performance optimization. Experienced in Agile/Scrum methodologies.
+        </p>
+        <div class="stranger__chats-cta">
+          <a
+            aria-label="Github"
+            rel="noreferrer noopener"
+            target="_blank"
+            href="https://github.com/babaklotfalizadeh"
+            class="github__button button button-white no__highlights"
+          >
+            <svg class="github__button-icon button-icon">
+              <use xlink:href="/icons/sprite.svg#vector-github-logo"></use>
+            </svg>
+            <svg class="github__button-icon button-icon">
+              <use xlink:href="/icons/sprite.svg#vector-github-logo-text"></use>
+            </svg>
+          </a>
+          <a
+            href="about.html"
+            class="button button-white no__highlights"
+            >more info</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase">
+      <h2 class="showcase__title">Work Experience</h2>
+
+      <div class="showcase__item">
+        <div class="showcase__item-info" style="width: 100%;">
+          <div class="showcase__item-info-text">
+            <h3>European Broadcasting Union (EBU)</h3>
+            <p><strong>Senior Flutter Developer</strong> · June 2023 – Present · Remote</p>
+            <p>A leading online broadcast media production and distribution company with over 460 employees. Developed and maintained Flutter applications, implementing new features and debugging issues. Improved data flow and efficiency through API integration with internal systems.</p>
+            <span>Flutter</span>
+            <span>Dart</span>
+            <span>API Integration</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase__item">
+        <div class="showcase__item-info" style="width: 100%;">
+          <div class="showcase__item-info-text">
+            <h3>SKIMS</h3>
+            <p><strong>Senior Flutter Developer</strong> · January 2024 – July 2024 · Remote</p>
+            <p>Solutions-oriented brand creating next-generation underwear with over 750 employees. Engineered and maintained Flutter applications, integrated internal systems with APIs, employed Scrum methodology, and developed unit and widget tests for robust applications.</p>
+            <span>Flutter</span>
+            <span>Scrum</span>
+            <span>Testing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase__item">
+        <div class="showcase__item-info" style="width: 100%;">
+          <div class="showcase__item-info-text">
+            <h3>Floward</h3>
+            <p><strong>Senior Flutter Developer</strong> · August 2022 – May 2023 · Remote</p>
+            <p>Online flower and gifting company operating in 36 cities with over 600 employees. Created and maintained Flutter modules, transitioning from native code to Flutter. Authored testable code with 99% test coverage. Facilitated cross-team meetings to enhance production quality.</p>
+            <span>Flutter</span>
+            <span>Native Migration</span>
+            <span>Test Coverage</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase__item">
+        <div class="showcase__item-info" style="width: 100%;">
+          <div class="showcase__item-info-text">
+            <h3>Geeks LTD</h3>
+            <p><strong>Software Developer</strong> · August 2021 – December 2022 · Remote</p>
+            <p>IT company focused on cross-platform application development with over 150 employees. Built and maintained multiple Flutter applications from scratch. Integrated over 100 APIs with internal systems. Utilized Scrum methodology, reducing development time by 20% and increasing software quality by 15%.</p>
+            <span>Flutter</span>
+            <span>API Integration</span>
+            <span>Scrum</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase__item">
+        <div class="showcase__item-info" style="width: 100%;">
+          <div class="showcase__item-info-text">
+            <h3>Raimun & Tahlilgaran</h3>
+            <p><strong>Mobile Developer / Software Developer</strong> · 2018 – 2021</p>
+            <p>Transitioned to Flutter, improving and redesigning existing production apps. Migrated Java projects to Kotlin, integrated applications with APIs and WebSockets, and implemented map navigation solutions to reduce travel time and costs.</p>
+            <span>Flutter</span>
+            <span>Kotlin</span>
+            <span>Java</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <footer class="footer">
-      <p class="footer__text">
-        Available for freelance and collaboration. Feel free to reach out at
-        <a href="mailto:you@example.com">you@example.com</a>.
-      </p>
-      <p class="footer__copy">
-        © <span id="year"></span> Your Name
-      </p>
+      <div class="footer__content">
+        <a href="about.html">About/Contact</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
     </footer>
-  </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
