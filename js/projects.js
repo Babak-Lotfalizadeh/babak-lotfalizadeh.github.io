@@ -97,8 +97,8 @@
       githubBtn.className = "github__button button button-white no__highlights";
       githubBtn.setAttribute("aria-label", "GitHub");
       githubBtn.innerHTML =
-        '<svg class="github__button-icon button-icon"><use xlink:href="/icons/sprite.svg#vector-github-logo"></use></svg>' +
-        '<svg class="github__button-icon button-icon"><use xlink:href="/icons/sprite.svg#vector-github-logo-text"></use></svg>';
+        '<svg class="github__button-icon button-icon"><use xlink:href="icons/sprite.svg#vector-github-logo"></use></svg>' +
+        '<svg class="github__button-icon button-icon"><use xlink:href="icons/sprite.svg#vector-github-logo-text"></use></svg>';
       cta.appendChild(githubBtn);
     }
     info.appendChild(cta);
