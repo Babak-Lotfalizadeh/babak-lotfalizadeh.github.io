@@ -823,12 +823,14 @@ article .github__button-icon:not(:last-child) {
 }
 
 .hero__info-img {
-  max-width: 20rem;
-  max-height: 20rem;
-  border-radius: 100rem;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
   border: 3px solid white;
   -webkit-box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.18);
   box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.18);
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 
 .hero__text {
@@ -887,6 +889,8 @@ article .github__button-icon:not(:last-child) {
   .hero__info-img {
     width: 12rem;
     height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
   }
 
   .hero__cta span {
@@ -910,8 +914,10 @@ article .github__button-icon:not(:last-child) {
   }
 
   .hero__info-img {
-    max-width: 15rem;
-    max-height: 15rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
   }
 }
 
