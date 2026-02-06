@@ -1113,46 +1113,7 @@ article .github__button-icon:not(:last-child) {
   }
 }
 
-/* STRANGER CHATS */
-.work_odd {
-  background-position: center;
-  background-size: cover;
-  min-height: 80rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.work_odd-info {
-  color: white;
-  max-width: 35rem;
-  text-align: center;
-  margin: 0 3rem;
-}
-
-.work_odd-info h2 {
-  font-weight: 400;
-  font-size: 3rem;
-}
-
-.work_odd-info p {
-  line-height: 3rem;
-  margin: 4rem 0;
-}
-
-@media only screen and (max-width: 700px) {
-  .work_odd {
-    background-image: url(/img/stranger-chats/web-mockup-mobile.png);
-  }
-}
-
-.work_even {
+.work_section {
   background-position: center;
   background-size: cover;
   min-height: 80rem;
@@ -1168,20 +1129,20 @@ article .github__button-icon:not(:last-child) {
   position: relative;
 }
 
-.work_even::before {
+.work_section::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: var(--work-bg-color, #FAF8F4);
   z-index: 0;
-  opacity: 0.8;
+  opacity: var(--work-bg-opacity, 0.8);
 }
 
-.work_even-info {
-  color: white;
+.work_section-info {
+  color: var(--work-text-color, black);
   max-width: 35rem;
   text-align: center;
   margin: 0 3rem;
@@ -1189,18 +1150,18 @@ article .github__button-icon:not(:last-child) {
   z-index: 1;
 }
 
-.work_even-info h2 {
+.work_section-info h2 {
   font-weight: 400;
   font-size: 3rem;
 }
 
-.work_even-info p {
+.work_section-info p {
   line-height: 3rem;
   margin: 4rem 0;
 }
 
 @media only screen and (max-width: 700px) {
-  .work_even {
+  .work_section {
     background-image: url(/img/stranger-chats/web-mockup-mobile.png);
   }
 }
@@ -1455,12 +1416,14 @@ article .github__button-icon:not(:last-child) {
   overflow: hidden;
 }
 
-.projects__bg-left,
-.projects__bg-right {
+.projects__bg-tech-i-left,
+.projects__bg-tech-i-right,
+.projects__bg-skims-left,
+.projects__bg-skims-right {
   position: absolute;
   top: 0;
   width: 50%;
-  height: 50%;
+  height: 100%;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1468,14 +1431,30 @@ article .github__button-icon:not(:last-child) {
   pointer-events: none;
 }
 
-.projects__bg-left {
+.projects__bg-skims-left {
   left: 0;
   background-image: url(/img/skims/skims1.png);
 }
 
-.projects__bg-right {
+.projects__bg-skims-right {
   right: 0;
   background-image: url(/img/skims/skims2.png);
+}
+
+.projects__bg-tech-i-left {
+  left: 0;
+  top: 5%;
+  bottom: 5%;
+  height: 90%;
+  background-image: url(/img/tech-i/tech_i_1.png);
+}
+
+.projects__bg-tech-i-right {
+  right: 0;
+  top: 5%;
+  bottom: 5%;
+  height: 90%;
+  background-image: url(/img/tech-i/tech_i_2.png);
 }
 
 .projects__list > section {
@@ -1484,7 +1463,7 @@ article .github__button-icon:not(:last-child) {
 }
 
 /* DOWNLOAD ICON */
-.work_even-cta {
+.work_section-cta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1499,7 +1478,7 @@ article .github__button-icon:not(:last-child) {
   flex-wrap: wrap;
 }
 
-.work_even-cta > a {
+.work_section-cta > a {
   display: inline-block;
   line-height: 0;
   width: 15rem;
