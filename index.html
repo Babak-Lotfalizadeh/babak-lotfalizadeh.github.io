@@ -29,8 +29,8 @@
       content="Portfolio - Babak Lotfalizadeh, Senior Flutter Developer"
     />
 
-    <link rel="apple-touch-icon" href="img/apple-icon.png" />
-    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/b_icon.png" />
+    <link rel="shortcut icon" type="image/jpg" href="img/b_icon.png" />
 
     <link rel="stylesheet" href="style.css?v=2.0" />
     <title>Portfolio - Babak Lotfalizadeh, Senior Flutter Developer</title>
@@ -122,7 +122,7 @@
         <img class="hero__info-img" src="img/profile-pic.jpg" alt="profile__photo">
         <div class="hero__text">
           <h1>Babak Lotfalizadeh</h1>
-          <span class="hero__text-desc">Senior Flutter Developer at European Broadcasting Union (EBU)</span>
+          <span class="hero__text-desc">Senior Mobile Developer</span>
         </div>
       </div>
       <div class="hero__cta">
@@ -135,36 +135,8 @@
       </div>
     </section>
 
-    <section class="stranger__chats">
-      <div class="stranger__chats-info">
-        <h2>Skills & Expertise</h2>
-        <p>
-          Flutter & Dart development, State Management (Provider, Riverpod, Bloc, GetX),
-          Firebase integration, API & REST integration, CI/CD pipelines, automated testing,
-          and performance optimization. Experienced in Agile/Scrum methodologies.
-        </p>
-        <div class="stranger__chats-cta">
-          <a
-            aria-label="Github"
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://github.com/babaklotfalizadeh"
-            class="github__button button button-white no__highlights"
-          >
-            <svg class="github__button-icon button-icon">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo"></use>
-            </svg>
-            <svg class="github__button-icon button-icon">
-              <use xlink:href="/icons/sprite.svg#vector-github-logo-text"></use>
-            </svg>
-          </a>
-          <a
-            href="about.html"
-            class="button button-white no__highlights"
-            >more info</a
-          >
-        </div>
-      </div>
+    <section class="projects" id="projects-section">
+      <!-- Content loaded here -->
     </section>
 
     <section class="showcase">
@@ -245,5 +217,13 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      fetch('portfolio/projects-content.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('projects-section').innerHTML = html;
+          // If projects are rendered by JS, run that here
+        });
+    </script>
   </body>
 </html>

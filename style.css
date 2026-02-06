@@ -1114,8 +1114,7 @@ article .github__button-icon:not(:last-child) {
 }
 
 /* STRANGER CHATS */
-.stranger__chats {
-  background-image: url(/img/stranger-chats/web-mockup.png);
+.work_odd {
   background-position: center;
   background-size: cover;
   min-height: 80rem;
@@ -1130,25 +1129,78 @@ article .github__button-icon:not(:last-child) {
   align-items: center;
 }
 
-.stranger__chats-info {
+.work_odd-info {
   color: white;
   max-width: 35rem;
   text-align: center;
   margin: 0 3rem;
 }
 
-.stranger__chats-info h2 {
+.work_odd-info h2 {
   font-weight: 400;
   font-size: 3rem;
 }
 
-.stranger__chats-info p {
+.work_odd-info p {
   line-height: 3rem;
   margin: 4rem 0;
 }
 
 @media only screen and (max-width: 700px) {
-  .stranger__chats {
+  .work_odd {
+    background-image: url(/img/stranger-chats/web-mockup-mobile.png);
+  }
+}
+
+.work_even {
+  background-position: center;
+  background-size: cover;
+  min-height: 80rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.work_even::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.work_even-info {
+  color: white;
+  max-width: 35rem;
+  text-align: center;
+  margin: 0 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.work_even-info h2 {
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.work_even-info p {
+  line-height: 3rem;
+  margin: 4rem 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .work_even {
     background-image: url(/img/stranger-chats/web-mockup-mobile.png);
   }
 }
@@ -1395,4 +1447,71 @@ article .github__button-icon:not(:last-child) {
   opacity: 1;
   border-bottom: 1px solid black;
   cursor: pointer;
+}
+
+/* PROJECTS CONTENT BACKGROUND */
+.projects__list {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects__bg-left,
+.projects__bg-right {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.projects__bg-left {
+  left: 0;
+  background-image: url(/img/skims/skims1.png);
+}
+
+.projects__bg-right {
+  right: 0;
+  background-image: url(/img/skims/skims2.png);
+}
+
+.projects__list > section {
+  position: relative;
+  z-index: 1;
+}
+
+/* DOWNLOAD ICON */
+.download-icon {
+  display: inline-block;
+  width: auto;
+  height: 4rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+
+.download-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (hover: hover) {
+  .download-icon:hover {
+    -webkit-transform: translate(0, -3px);
+    -ms-transform: translate(0, -3px);
+    transform: translate(0, -3px);
+    opacity: 0.8;
+  }
+}
+
+.download-icon:active {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
 }
