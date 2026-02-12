@@ -251,3 +251,209 @@ if (galleryTargets != null) {
     galleryObserver.observe(gallery);
   });
 }
+
+// Render Projects from JSON
+// ===========================
+function renderProjects(projects) {
+  const projectsContainer = document.getElementById('projects-section');
+  
+  if (!projectsContainer) return;
+  
+  const projectsList = document.createElement('div');
+  projectsList.id = 'projects-content';
+  projectsList.className = 'projects__list';
+  
+  projects.forEach(project => {
+    const section = document.createElement('section');
+    section.className = 'work_section';
+    section.style.setProperty('--work-bg-color', project.styles.bgColor);
+    section.style.setProperty('--work-bg-opacity', project.styles.bgOpacity);
+    section.style.setProperty('--work-text-color', project.styles.textColor);
+    
+    // Left background image
+    const bgLeft = document.createElement('div');
+    bgLeft.className = project.backgroundClasses.left;
+    const imgLeft = document.createElement('img');
+    imgLeft.src = project.images.left;
+    imgLeft.alt = '';
+    imgLeft.setAttribute('aria-hidden', 'true');
+    imgLeft.loading = 'lazy';
+    bgLeft.appendChild(imgLeft);
+    
+    // Right background image
+    const bgRight = document.createElement('div');
+    bgRight.className = project.backgroundClasses.right;
+    const imgRight = document.createElement('img');
+    imgRight.src = project.images.right;
+    imgRight.alt = '';
+    imgRight.setAttribute('aria-hidden', 'true');
+    imgRight.loading = 'lazy';
+    bgRight.appendChild(imgRight);
+    
+    // Info section
+    const info = document.createElement('div');
+    info.className = 'work_section-info';
+    
+    const title = document.createElement('h2');
+    title.textContent = project.title;
+    
+    const description = document.createElement('p');
+    description.textContent = project.description;
+    
+    // CTA section
+    const cta = document.createElement('div');
+    cta.className = 'work_section-cta';
+    
+    // App Store link
+    if (project.links.appStore) {
+      const appStoreLink = document.createElement('a');
+      appStoreLink.href = project.links.appStore;
+      appStoreLink.target = '_blank';
+      appStoreLink.rel = 'noreferrer noopener';
+      appStoreLink.className = 'no__highlights';
+      
+      const appStoreSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      appStoreSvg.setAttribute('class', 'download-icon');
+      appStoreSvg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+      appStoreSvg.setAttribute('viewBox', '0 0 135 40');
+      
+      const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+      use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'icons/SVG/app_store.svg');
+      appStoreSvg.appendChild(use);
+      appStoreLink.appendChild(appStoreSvg);
+      cta.appendChild(appStoreLink);
+    }
+    
+    // Google Play link
+    if (project.links.googlePlay) {
+      const googlePlayLink = document.createElement('a');
+      googlePlayLink.href = project.links.googlePlay;
+      googlePlayLink.target = '_blank';
+      googlePlayLink.rel = 'noreferrer noopener';
+      googlePlayLink.className = 'no__highlights';
+      
+      const googlePlaySvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      googlePlaySvg.setAttribute('class', 'download-icon');
+      googlePlaySvg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+      googlePlaySvg.setAttribute('viewBox', '0 0 135 40');
+      
+      const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+      use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'icons/SVG/google_play.svg');
+      googlePlaySvg.appendChild(use);
+      googlePlayLink.appendChild(googlePlaySvg);
+      cta.appendChild(googlePlayLink);
+    }
+    
+    // GitHub link
+    if (project.links.github) {
+      const githubLink = document.createElement('a');
+      githubLink.href = project.links.github;
+      githubLink.target = '_blank';
+      githubLink.rel = 'noreferrer noopener';
+      githubLink.className = 'no__highlights';
+      githubLink.setAttribute('aria-label', 'GitHub');
+      
+      const githubSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      githubSvg.setAttribute('class', 'download-icon');
+      githubSvg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+      githubSvg.setAttribute('viewBox', '0 0 113 32');
+      
+      const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+      use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'icons/sprite.svg#vector-github-logo-text');
+      githubSvg.appendChild(use);
+      githubLink.appendChild(githubSvg);
+      cta.appendChild(githubLink);
+    }
+    
+    // Assemble the section
+    info.appendChild(title);
+    info.appendChild(description);
+    info.appendChild(cta);
+    
+    section.appendChild(bgLeft);
+    section.appendChild(bgRight);
+    section.appendChild(info);
+    
+    projectsList.appendChild(section);
+  });
+  
+  projectsContainer.appendChild(projectsList);
+}
+
+// Load and render projects from JSON
+function loadProjects() {
+  fetch('portfolio/projects-data.json')
+    .then(res => res.json())
+    .then(projects => {
+      renderProjects(projects);
+    })
+    .catch(error => {
+      console.error('Error loading projects:', error);
+    });
+}
+
+// Render Experience from JSON
+// ===========================
+function renderExperience(experiences) {
+  const experienceContainer = document.getElementById('experience-section');
+  
+  if (!experienceContainer) return;
+  
+  const title = document.createElement('h2');
+  title.className = 'showcase__title';
+  title.textContent = 'Work Experience';
+  experienceContainer.appendChild(title);
+  
+  experiences.forEach(exp => {
+    const item = document.createElement('div');
+    item.className = 'showcase__item';
+    
+    const info = document.createElement('div');
+    info.className = 'showcase__item-info';
+    info.style.width = '100%';
+    
+    const infoText = document.createElement('div');
+    infoText.className = 'showcase__item-info-text';
+    
+    const company = document.createElement('h3');
+    company.textContent = exp.company;
+    
+    const role = document.createElement('p');
+    const strong = document.createElement('strong');
+    strong.textContent = exp.role;
+    role.appendChild(strong);
+    const periodText = exp.location
+      ? ` · ${exp.period} · ${exp.location}`
+      : ` · ${exp.period}`;
+    role.appendChild(document.createTextNode(periodText));
+    
+    const description = document.createElement('p');
+    description.textContent = exp.description;
+    
+    infoText.appendChild(company);
+    infoText.appendChild(role);
+    infoText.appendChild(description);
+    
+    exp.tags.forEach(tag => {
+      const span = document.createElement('span');
+      span.textContent = tag;
+      infoText.appendChild(span);
+    });
+    
+    info.appendChild(infoText);
+    item.appendChild(info);
+    experienceContainer.appendChild(item);
+  });
+}
+
+// Load and render experience from JSON
+function loadExperience() {
+  fetch('portfolio/experience-data.json')
+    .then(res => res.json())
+    .then(experiences => {
+      renderExperience(experiences);
+    })
+    .catch(error => {
+      console.error('Error loading experience:', error);
+    });
+}

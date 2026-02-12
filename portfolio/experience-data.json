@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ebu",
+    "company": "European Broadcasting Union (EBU)",
+    "role": "Senior Flutter Developer",
+    "period": "June 2023 – Present",
+    "location": "Remote",
+    "description": "A leading online broadcast media production and distribution company with over 460 employees. Developed and maintained Flutter applications, implementing new features and debugging issues. Improved data flow and efficiency through API integration with internal systems.",
+    "tags": ["Flutter", "Dart", "API Integration"]
+  },
+  {
+    "id": "skims",
+    "company": "SKIMS",
+    "role": "Senior Flutter Developer",
+    "period": "January 2024 – July 2024",
+    "location": "Remote",
+    "description": "Solutions-oriented brand creating next-generation underwear with over 750 employees. Engineered and maintained Flutter applications, integrated internal systems with APIs, employed Scrum methodology, and developed unit and widget tests for robust applications.",
+    "tags": ["Flutter", "Scrum", "Testing"]
+  },
+  {
+    "id": "floward",
+    "company": "Floward",
+    "role": "Senior Flutter Developer",
+    "period": "August 2022 – May 2023",
+    "location": "Remote",
+    "description": "Online flower and gifting company operating in 36 cities with over 600 employees. Created and maintained Flutter modules, transitioning from native code to Flutter. Authored testable code with 99% test coverage. Facilitated cross-team meetings to enhance production quality.",
+    "tags": ["Flutter", "Native Migration", "Test Coverage"]
+  },
+  {
+    "id": "geeks",
+    "company": "Geeks LTD",
+    "role": "Software Developer",
+    "period": "August 2021 – December 2022",
+    "location": "Remote",
+    "description": "IT company focused on cross-platform application development with over 150 employees. Built and maintained multiple Flutter applications from scratch. Integrated over 100 APIs with internal systems. Utilized Scrum methodology, reducing development time by 20% and increasing software quality by 15%.",
+    "tags": ["Flutter", "API Integration", "Scrum"]
+  },
+  {
+    "id": "raimun",
+    "company": "Raimun & Tahlilgaran",
+    "role": "Mobile Developer / Software Developer",
+    "period": "2018 – 2021",
+    "location": null,
+    "description": "Transitioned to Flutter, improving and redesigning existing production apps. Migrated Java projects to Kotlin, integrated applications with APIs and WebSockets, and implemented map navigation solutions to reduce travel time and costs.",
+    "tags": ["Flutter", "Kotlin", "Java"]
+  }
+]

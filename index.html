@@ -139,73 +139,8 @@
       <!-- Content loaded here -->
     </section>
 
-    <section class="showcase">
-      <h2 class="showcase__title">Work Experience</h2>
-
-      <div class="showcase__item">
-        <div class="showcase__item-info" style="width: 100%;">
-          <div class="showcase__item-info-text">
-            <h3>European Broadcasting Union (EBU)</h3>
-            <p><strong>Senior Flutter Developer</strong> · June 2023 – Present · Remote</p>
-            <p>A leading online broadcast media production and distribution company with over 460 employees. Developed and maintained Flutter applications, implementing new features and debugging issues. Improved data flow and efficiency through API integration with internal systems.</p>
-            <span>Flutter</span>
-            <span>Dart</span>
-            <span>API Integration</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="showcase__item">
-        <div class="showcase__item-info" style="width: 100%;">
-          <div class="showcase__item-info-text">
-            <h3>SKIMS</h3>
-            <p><strong>Senior Flutter Developer</strong> · January 2024 – July 2024 · Remote</p>
-            <p>Solutions-oriented brand creating next-generation underwear with over 750 employees. Engineered and maintained Flutter applications, integrated internal systems with APIs, employed Scrum methodology, and developed unit and widget tests for robust applications.</p>
-            <span>Flutter</span>
-            <span>Scrum</span>
-            <span>Testing</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="showcase__item">
-        <div class="showcase__item-info" style="width: 100%;">
-          <div class="showcase__item-info-text">
-            <h3>Floward</h3>
-            <p><strong>Senior Flutter Developer</strong> · August 2022 – May 2023 · Remote</p>
-            <p>Online flower and gifting company operating in 36 cities with over 600 employees. Created and maintained Flutter modules, transitioning from native code to Flutter. Authored testable code with 99% test coverage. Facilitated cross-team meetings to enhance production quality.</p>
-            <span>Flutter</span>
-            <span>Native Migration</span>
-            <span>Test Coverage</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="showcase__item">
-        <div class="showcase__item-info" style="width: 100%;">
-          <div class="showcase__item-info-text">
-            <h3>Geeks LTD</h3>
-            <p><strong>Software Developer</strong> · August 2021 – December 2022 · Remote</p>
-            <p>IT company focused on cross-platform application development with over 150 employees. Built and maintained multiple Flutter applications from scratch. Integrated over 100 APIs with internal systems. Utilized Scrum methodology, reducing development time by 20% and increasing software quality by 15%.</p>
-            <span>Flutter</span>
-            <span>API Integration</span>
-            <span>Scrum</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="showcase__item">
-        <div class="showcase__item-info" style="width: 100%;">
-          <div class="showcase__item-info-text">
-            <h3>Raimun & Tahlilgaran</h3>
-            <p><strong>Mobile Developer / Software Developer</strong> · 2018 – 2021</p>
-            <p>Transitioned to Flutter, improving and redesigning existing production apps. Migrated Java projects to Kotlin, integrated applications with APIs and WebSockets, and implemented map navigation solutions to reduce travel time and costs.</p>
-            <span>Flutter</span>
-            <span>Kotlin</span>
-            <span>Java</span>
-          </div>
-        </div>
-      </div>
+    <section class="showcase" id="experience-section">
+      <!-- Content loaded from experience-data.json -->
     </section>
 
 
@@ -218,12 +153,16 @@
 
     <script src="script.js"></script>
     <script>
-      fetch('portfolio/projects-content.html')
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById('projects-section').innerHTML = html;
-          // If projects are rendered by JS, run that here
-        });
+      // Load content from JSON when DOM is ready
+      function loadContent() {
+        loadProjects();
+        loadExperience();
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadContent);
+      } else {
+        loadContent();
+      }
     </script>
   </body>
 </html>

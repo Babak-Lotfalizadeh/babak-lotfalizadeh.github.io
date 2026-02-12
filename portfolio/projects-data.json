@@ -1,0 +1,48 @@
+[
+  {
+    "id": "skims",
+    "title": "SKIMS",
+    "description": "As a Senior Flutter Developer on the Skims Flutter app (Android & iOS), I contributed to design, refactoring, and architecture within a 5-developer Flutter team, implementing Clean Architecture with BLoC state management while collaborating on UI, testing, and production deployments.",
+    "images": {
+      "left": "img/skims/skims1.png",
+      "right": "img/skims/skims2.png"
+    },
+    "links": {
+      "appStore": "https://apps.apple.com/us/app/skims/id6449501345",
+      "googlePlay": "https://play.google.com/store/apps/details?id=com.skims.shop&hl=en",
+      "github": null
+    },
+    "styles": {
+      "bgColor": "#FAF8F4",
+      "bgOpacity": "0.8",
+      "textColor": "black"
+    },
+    "backgroundClasses": {
+      "left": "projects__bg-skims-left",
+      "right": "projects__bg-skims-right"
+    }
+  },
+  {
+    "id": "tech-i",
+    "title": "Tech-I",
+    "description": "As a Flutter Developer on the Tech I app, I was one of two developers handling every aspect—from architecture and design to CI/CD pipelines, debugging, publishing, UI implementation, testing, and production deployments—delivering a robust cross-platform solution.",
+    "images": {
+      "left": "img/tech-i/tech_i_1.png",
+      "right": "img/tech-i/tech_i_2.png"
+    },
+    "links": {
+      "appStore": "https://apps.apple.com/us/app/tech-i/id6448098876",
+      "googlePlay": "https://play.google.com/store/apps/details?id=ch.ebu.techi.flutter&hl=en",
+      "github": null
+    },
+    "styles": {
+      "bgColor": "#000000",
+      "bgOpacity": "0.9",
+      "textColor": "white"
+    },
+    "backgroundClasses": {
+      "left": "projects__bg-tech-i-left",
+      "right": "projects__bg-tech-i-right"
+    }
+  }
+]
