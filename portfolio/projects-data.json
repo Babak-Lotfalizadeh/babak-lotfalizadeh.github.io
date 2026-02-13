@@ -3,6 +3,7 @@
     "id": "skims",
     "title": "SKIMS",
     "description": "As a Senior Flutter Developer on the Skims Flutter app (Android & iOS), I contributed to design, refactoring, and architecture within a 5-developer Flutter team, implementing Clean Architecture with BLoC state management while collaborating on UI, testing, and production deployments.",
+    "video": null,
     "images": {
       "left": "img/skims/skims1.png",
       "right": "img/skims/skims2.png"
@@ -15,17 +16,15 @@
     "styles": {
       "bgColor": "#FAF8F4",
       "bgOpacity": "0.8",
-      "textColor": "black"
-    },
-    "backgroundClasses": {
-      "left": "projects__bg-skims-left",
-      "right": "projects__bg-skims-right"
+      "textColor": "black",
+      "imagePadding": "0"
     }
   },
   {
     "id": "tech-i",
     "title": "Tech-I",
     "description": "As a Flutter Developer on the Tech I app, I was one of two developers handling every aspect—from architecture and design to CI/CD pipelines, debugging, publishing, UI implementation, testing, and production deployments—delivering a robust cross-platform solution.",
+    "video": null,
     "images": {
       "left": "img/tech-i/tech_i_1.png",
       "right": "img/tech-i/tech_i_2.png"
@@ -38,11 +37,72 @@
     "styles": {
       "bgColor": "#000000",
       "bgOpacity": "0.9",
-      "textColor": "white"
+      "textColor": "white",
+      "imagePadding": "5%"
+    }
+  },
+  {
+    "id": "subnet",
+    "title": "Subnet",
+    "description": "The Subnet app is a highly efficient tool built for sub-contractors working in the construction industry. This powerful application, allows registered users to manage their personal information, raise small work orders, complete their weekly timesheets, create health and safety observations, sign in and out of construction sites and much more. Please note that access to this application is limited to the company's sub-contractors.",
+    "video": null,
+    "images": {
+      "left": "img/subnet/subnet.jpg",
+      "right": null
     },
-    "backgroundClasses": {
-      "left": "projects__bg-tech-i-left",
-      "right": "projects__bg-tech-i-right"
+    "links": {
+      "appStore": "https://apps.apple.com/gb/app/subnet/id1608911607",
+      "googlePlay": "https://play.google.com/store/apps/details?id=uk.co.uatmrgroup.houstoncoxmobile&hl=en",
+      "github": null
+    },
+    "styles": {
+      "bgColor": "#FFFFFF",
+      "bgOpacity": "1.0",
+      "textColor": "black",
+      "imagePadding": "0"
+    }
+  },
+  {
+    "id": "messenger",
+    "title": "Messenger",
+    "description": "Example project built to demonstrate advanced Flutter concepts, including animations, state management with Provider, integration with Firebase services, support for tablet devices, dark mode, light mode, and other modern development practices.",
+    "video": "https://www.youtube.com/shorts/gEMYIjXJVls",
+    "images": {
+      "left": null,
+      "right": null
+    },
+    "links": {
+      "appStore": null,
+      "googlePlay": null,
+      "github": "https://github.com/Babak-Lotfalizadeh/messanger"
+    },
+    "styles": {
+      "bgColor": "#000000",
+      "bgOpacity": "0.9",
+      "textColor": "white",
+      "imagePadding": "0%"
+    }
+  },
+  {
+    "id": "sneaker-app",
+    "title": "Sneaker Shop",
+    "description": "Example project built to demonstrate advanced Flutter concepts, including pure Dart animations, state management with Provider.",
+    "video": "youtube.com/shorts/rNw7VSpYbhg?feature=share",
+    "images": {
+      "left": null,
+      "right": null
+    },
+    "links": {
+      "appStore": null,
+      "googlePlay": null,
+      "github": "https://github.com/Babak-Lotfalizadeh/sneaker_shop"
+    },
+    "styles": {
+      "bgColor": "#FFFFFF",
+      "bgOpacity": "1.0",
+      "textColor": "black",
+      "imagePadding": "0"
     }
   }
+
 ]
