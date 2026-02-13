@@ -103,6 +103,27 @@
       "textColor": "black",
       "imagePadding": "0"
     }
+  },
+  {
+    "id": "flutter-portfolio",
+    "title": "More projects",
+    "description": "A collection of Flutter projects showcasing various development techniques, architecture patterns, and UI implementations.",
+    "video": null,
+    "embed": "https://docs.google.com/presentation/d/1X5cIbd14GTjbKfV_DzzoXM3XnE2CYK9F3mbExC5w9M8/edit?slide=id.g20436149eff_4_32#slide=id.g20436149eff_4_32",
+    "images": {
+      "left": null,
+      "right": null
+    },
+    "links": {
+      "appStore": null,
+      "googlePlay": null,
+      "github": null
+    },
+    "styles": {
+      "bgColor": "#FAF8F4",
+      "bgOpacity": "0.8",
+      "textColor": "black",
+      "imagePadding": "0"
+    }
   }
-
 ]

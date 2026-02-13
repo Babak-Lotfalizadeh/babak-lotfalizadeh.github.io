@@ -274,6 +274,18 @@ function isYouTubeShort(url) {
   return url && url.includes('/shorts/');
 }
 
+// Convert Google Slides URL to embed URL
+// ===========================
+function getGoogleSlidesEmbedUrl(url) {
+  if (!url) return '';
+  // Already an embed URL
+  if (url.includes('/embed')) return url;
+  // Extract presentation ID and convert to embed
+  const match = url.match(/\/presentation\/d\/([a-zA-Z0-9_-]+)/);
+  if (match) return 'https://docs.google.com/presentation/d/' + match[1] + '/embed?start=false&loop=false&delayms=3000';
+  return url;
+}
+
 // Render Projects from JSON
 // ===========================
 function renderProjects(projects) {
@@ -287,8 +299,9 @@ function renderProjects(projects) {
   
   projects.forEach(project => {
     const hasVideo = !!project.video;
-    const isSingleImage = !project.images.right && !hasVideo;
-    const isSingleMedia = isSingleImage || hasVideo;
+    const hasEmbed = !!project.embed;
+    const isSingleImage = !project.images.right && !hasVideo && !hasEmbed;
+    const isSingleMedia = isSingleImage || hasVideo || hasEmbed;
     
     const section = document.createElement('section');
     section.className = isSingleMedia ? 'work_section work_section--single-image' : 'work_section';
@@ -303,7 +316,19 @@ function renderProjects(projects) {
     let bgLeft = null;
     let bgRight = null;
     
-    if (hasVideo) {
+    if (hasEmbed) {
+      // Google Slides / generic embed
+      bgLeft = document.createElement('div');
+      bgLeft.className = 'projects__bg-single-left projects__embed-wrapper';
+      
+      const iframe = document.createElement('iframe');
+      iframe.src = getGoogleSlidesEmbedUrl(project.embed);
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allowfullscreen', 'true');
+      iframe.loading = 'lazy';
+      iframe.title = project.title;
+      bgLeft.appendChild(iframe);
+    } else if (hasVideo) {
       // YouTube video embed
       const isShort = isYouTubeShort(project.video);
       bgLeft = document.createElement('div');
@@ -414,6 +439,17 @@ function renderProjects(projects) {
       githubSvg.appendChild(use);
       githubLink.appendChild(githubSvg);
       cta.appendChild(githubLink);
+    }
+    
+    // Web link
+    if (project.links.web) {
+      const webLink = document.createElement('a');
+      webLink.href = project.links.web.url;
+      webLink.target = '_blank';
+      webLink.rel = 'noreferrer noopener';
+      webLink.className = 'no__highlights work_section-web-link';
+      webLink.textContent = project.links.web.label || 'View Project';
+      cta.appendChild(webLink);
     }
     
     // Assemble the section

@@ -1216,6 +1216,22 @@ article .github__button-icon:not(:last-child) {
   display: block;
 }
 
+/* Google Slides / generic embed */
+.projects__embed-wrapper {
+  position: relative;
+  width: 55%;
+  padding: 4rem;
+}
+
+.projects__embed-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 1.5rem;
+  display: block;
+  border: none;
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.15);
+}
+
 .projects__video-wrapper--short iframe {
   aspect-ratio: 9 / 16;
   max-height: 50rem;
@@ -1240,6 +1256,11 @@ article .github__button-icon:not(:last-child) {
 
   .work_section--single-image .projects__video-wrapper {
     width: 90%;
+    padding: 4rem 2rem 0;
+  }
+
+  .work_section--single-image .projects__embed-wrapper {
+    width: 95%;
     padding: 4rem 2rem 0;
   }
 
@@ -1559,6 +1580,35 @@ article .github__button-icon:not(:last-child) {
   width: 15rem;
   height: 5rem;
   color: inherit;
+}
+
+/* Web link button */
+.work_section-web-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  padding: 0 2.5rem;
+  border: 1px solid currentColor;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .work_section-web-link:hover {
+    transform: translate(0, -3px);
+    opacity: 0.8;
+  }
+}
+
+.work_section-web-link:active {
+  transform: scale(0.95);
 }
 
 .download-icon {
