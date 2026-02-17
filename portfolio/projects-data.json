@@ -6,7 +6,7 @@
     "video": null,
     "images": {
       "left": "img/skims/skims1.png",
-      "right": "img/skims/skims2.png"
+      "right": null
     },
     "links": {
       "appStore": "https://apps.apple.com/us/app/skims/id6449501345",
@@ -26,8 +26,8 @@
     "description": "As a Flutter Developer on the Tech I app, I was one of two developers handling every aspect—from architecture and design to CI/CD pipelines, debugging, publishing, UI implementation, testing, and production deployments—delivering a robust cross-platform solution.",
     "video": null,
     "images": {
-      "left": "img/tech-i/tech_i_1.png",
-      "right": "img/tech-i/tech_i_2.png"
+      "left": "img/tech-i/tech_i_2.png",
+      "right": null
     },
     "links": {
       "appStore": "https://apps.apple.com/us/app/tech-i/id6448098876",

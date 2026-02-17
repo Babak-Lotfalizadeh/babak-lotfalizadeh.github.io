@@ -1241,33 +1241,100 @@ article .github__button-icon:not(:last-child) {
 
 @media only screen and (max-width: 700px) {
   .work_section {
-    background-image: url(img/stranger-chats/web-mockup-mobile.png);
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .projects__bg-right {
+    display: none;
+  }
+
+  .projects__bg-left {
+    position: relative;
+    width: 60%;
+    height: auto;
+    top: auto;
+    left: auto;
+    padding: 3rem 2rem 0;
+    z-index: 1;
+  }
+
+  .projects__bg-left img {
+    height: auto;
+    max-height: 40rem;
+    border-radius: 1.5rem;
+  }
+
+  .work_section-info {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 2rem 3rem 3rem;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .work_section-info p {
+    margin: 2rem 0;
   }
 
   .work_section--single-image {
     flex-direction: column;
     min-height: auto;
+    padding: 2rem 0;
   }
 
   .work_section--single-image .projects__bg-single-left {
-    width: 70%;
-    padding: 4rem 2rem 0;
+    width: 60%;
+    padding: 3rem 2rem 0;
   }
 
   .work_section--single-image .projects__video-wrapper {
     width: 90%;
-    padding: 4rem 2rem 0;
+    padding: 3rem 2rem 0;
   }
 
   .work_section--single-image .projects__embed-wrapper {
     width: 95%;
-    padding: 4rem 2rem 0;
+    padding: 3rem 2rem 0;
   }
 
   .work_section--single-image .work_section-info {
     width: 100%;
     text-align: center;
-    padding: 2rem 3rem 4rem;
+    padding: 2rem 3rem 3rem;
+  }
+
+  .work_section-cta {
+    gap: 1rem;
+  }
+
+  .work_section-cta > a {
+    width: 12rem;
+    height: 4rem;
+  }
+
+  .work_section-web-link {
+    height: 4rem;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .work_section--single-image .projects__bg-single-left {
+    width: 75%;
+  }
+
+  .work_section-info h2 {
+    font-size: 2.4rem;
+  }
+
+  .work_section-info p {
+    font-size: 1.3rem;
+    line-height: 2.4rem;
   }
 }
 
@@ -1620,7 +1687,10 @@ article .github__button-icon:not(:last-child) {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   overflow: visible;
-  fill: currentColor;
+}
+
+img.download-icon--github {
+  object-fit: contain;
 }
 
 .download-icon svg {

@@ -429,15 +429,15 @@ function renderProjects(projects) {
       githubLink.className = 'no__highlights';
       githubLink.setAttribute('aria-label', 'GitHub');
       
-      const githubSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      githubSvg.setAttribute('class', 'download-icon');
-      githubSvg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
-      githubSvg.setAttribute('viewBox', '0 0 113 32');
-      
-      const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-      use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'icons/sprite.svg#vector-github-logo-text');
-      githubSvg.appendChild(use);
-      githubLink.appendChild(githubSvg);
+      const githubImg = document.createElement('img');
+      githubImg.src = 'icons/SVG/github-logo-text.png';
+      githubImg.alt = 'GitHub';
+      githubImg.className = 'download-icon download-icon--github';
+      githubImg.loading = 'lazy';
+      if (project.styles.textColor === 'white' || project.styles.textColor === '#FFFFFF' || project.styles.textColor === '#ffffff' || project.styles.textColor === '#fff') {
+        githubImg.style.filter = 'invert(1)';
+      }
+      githubLink.appendChild(githubImg);
       cta.appendChild(githubLink);
     }
     
